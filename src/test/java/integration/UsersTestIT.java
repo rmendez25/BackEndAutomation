@@ -43,13 +43,6 @@ public class UsersTestIT {
 
         Response user = RestUtils.post(POST_USER, payload.toString());
         Assertions.assertEquals(201, user.getStatusCode());
-
-        JSONObject response = new JSONObject(user.getBody().toString());
-
-        System.out.println(response.getJSONArray("data"));
-
-        //Assertions.assertEquals("Robert", response.getString("name"));
-       // Assertions.assertEquals("Automation Engineer", response.getString("job"));
     }
 
 }
